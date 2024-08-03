@@ -1,9 +1,9 @@
 // TextToFileNode.js
 
 import { useState } from "react";
-import NodeContainer from "../components/Canvas/NodeContainer";
+import NodeContainer from "../components/canvas/NodeContainer";
 import { FILE_INPUT_OPTIONS, NODE_TYPES } from "../utils/constants";
-import SelectBox from "../components/Canvas/SelectBox";
+import SelectBox from "../components/canvas/SelectBox";
 
 export const TextToFileNode = ({ id, data }) => {
   const [inputType, setInputType] = useState(data.inputType || "pdf");

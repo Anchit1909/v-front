@@ -1,7 +1,7 @@
 // textNode.js
 
 import { useState } from "react";
-import NodeContainer from "../components/Canvas/NodeContainer";
+import NodeContainer from "../components/canvas/NodeContainer";
 import { NODE_TYPES } from "../utils/constants";
 import { Textarea } from "../components/ui/Textarea";
 import { useUpdateNodeInternals } from "reactflow";

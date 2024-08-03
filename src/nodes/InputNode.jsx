@@ -1,10 +1,10 @@
 // inputNode.js
 
 import { useState } from "react";
-import NodeContainer from "../components/Canvas/NodeContainer";
-import InputBox from "../components/Canvas/InputBox";
+import NodeContainer from "../components/canvas/NodeContainer";
+import InputBox from "../components/canvas/InputBox";
 import { INPUT_OPTIONS, NODE_TYPES } from "../utils/constants";
-import SelectBox from "../components/Canvas/SelectBox";
+import SelectBox from "../components/canvas/SelectBox";
 
 export const InputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState(

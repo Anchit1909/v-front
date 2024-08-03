@@ -1,9 +1,9 @@
 // SemanticSearchNode.js
 
 import { useState } from "react";
-import NodeContainer from "../components/Canvas/NodeContainer";
+import NodeContainer from "../components/canvas/NodeContainer";
 import { NODE_TYPES, SEMANTIC_SEARCH_OPTIONS } from "../utils/constants";
-import SelectBox from "../components/Canvas/SelectBox";
+import SelectBox from "../components/canvas/SelectBox";
 
 export const SemanticSearchNode = ({ id, data }) => {
   const [inputType, setInputType] = useState(

@@ -1,8 +1,8 @@
 // llmNode.js
 
 import { useState } from "react";
-import NodeContainer from "../components/Canvas/NodeContainer";
-import InputBox from "../components/Canvas/InputBox";
+import NodeContainer from "../components/canvas/NodeContainer";
+import InputBox from "../components/canvas/InputBox";
 import { NODE_TYPES } from "../utils/constants";
 
 export const LLMNode = ({ id, data }) => {

@@ -1,10 +1,10 @@
 // UrlLoaderNode.js
 
 import { useState } from "react";
-import NodeContainer from "../components/Canvas/NodeContainer";
+import NodeContainer from "../components/canvas/NodeContainer";
 import { NODE_TYPES } from "../utils/constants";
-import InputBox from "../components/Canvas/InputBox";
-import CardInfo from "../components/Canvas/CardInfo";
+import InputBox from "../components/canvas/InputBox";
+import CardInfo from "../components/canvas/CardInfo";
 
 export const UrlLoaderNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || "");
