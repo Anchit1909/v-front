@@ -8,4 +8,5 @@ export const NODE_TYPES = {
   output: "output",
   text: "text",
   llm: "llm",
+  urlLoader: "urlLoader",
 };
