@@ -1,3 +1,9 @@
+export const FILE_INPUT_OPTIONS = [
+  { text: "PDF", value: "pdf" },
+  { text: "TXT", value: "txt" },
+  { text: "DOCX", value: "docx" },
+];
+
 export const INPUT_OPTIONS = [
   { text: "Text", value: "text" },
   { text: "File", value: "file" },
@@ -10,4 +16,5 @@ export const NODE_TYPES = {
   llm: "llm",
   urlLoader: "urlLoader",
   gitLoader: "gitLoader",
+  textToFile: "textToFile",
 };

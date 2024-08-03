@@ -19,6 +19,7 @@ export const PipelineToolbar = () => {
         <DraggableNode type="text" label="Text" />
         <DraggableNode type="urlLoader" label="URL" />
         <DraggableNode type="gitLoader" label="Git" />
+        <DraggableNode type="textToFile" label="Text to File" />
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import { OutputNode } from "./nodes/OutputNode";
 import { TextNode } from "./nodes/TextNode";
 import { UrlLoaderNode } from "./nodes/UrlLoaderNode";
 import { GitLoaderNode } from "./nodes/GitLoaderNode";
+import { TextToFileNode } from "./nodes/TextToFileNode";
 
 import "reactflow/dist/style.css";
 
@@ -24,6 +25,7 @@ const nodeTypes = {
   text: TextNode,
   urlLoader: UrlLoaderNode,
   gitLoader: GitLoaderNode,
+  textToFile: TextToFileNode,
 };
 
 const selector = (state) => ({

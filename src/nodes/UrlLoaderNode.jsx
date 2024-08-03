@@ -1,4 +1,4 @@
-// urlLoaderNode.js
+// UrlLoaderNode.js
 
 import { useState } from "react";
 import NodeContainer from "../components/Canvas/NodeContainer";

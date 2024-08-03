@@ -25,7 +25,7 @@ function SelectBox({
           <SelectValue placeholder="Select" />
         </SelectTrigger>
         <SelectContent>
-          {INPUT_OPTIONS.map((type, index) => (
+          {options.map((type, index) => (
             <>
               <SelectItem key={index} value={type.text}>
                 {type.value}

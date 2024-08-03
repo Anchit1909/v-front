@@ -1,4 +1,4 @@
-// urlLoaderNode.js
+// GitLoaderNode.js
 
 import { useState } from "react";
 import NodeContainer from "../components/Canvas/NodeContainer";
