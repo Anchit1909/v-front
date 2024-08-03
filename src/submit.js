@@ -1,7 +1,7 @@
 // submit.js
 import { useStore } from "./store";
 import { useToast } from "./components/ui/useToast";
-import { Toast, ToastAction } from "./components/ui/Toast";
+import { ToastAction } from "./components/ui/Toast";
 import { Button } from "./components/ui/Button";
 
 export const SubmitButton = () => {
@@ -37,7 +37,7 @@ export const SubmitButton = () => {
             <p className="font-medium text-base">{validityMessage}</p>
           </div>
         ),
-        duration: 6000,
+        duration: 5000,
       });
     } catch (error) {
       toast({
