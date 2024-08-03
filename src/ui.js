@@ -16,6 +16,7 @@ import { TextToFileNode } from "./nodes/TextToFileNode";
 import { SemanticSearchNode } from "./nodes/SemanticSearchNode";
 
 import "reactflow/dist/style.css";
+import { OpenAINode } from "./nodes/OpenAINode";
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };
@@ -28,6 +29,7 @@ const nodeTypes = {
   gitLoader: GitLoaderNode,
   textToFile: TextToFileNode,
   semanticSearch: SemanticSearchNode,
+  openAI: OpenAINode,
 };
 
 const selector = (state) => ({

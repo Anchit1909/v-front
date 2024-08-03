@@ -20,6 +20,15 @@ export const SEMANTIC_SEARCH_OPTIONS = [
   { text: "cohere/embed-english-v3", value: "cohere-embed-english-v3" },
 ];
 
+export const OPEN_AI_MODELS = [
+  { text: "gpt-4-turbo-preview", value: "gpt_4_turbo_preview" },
+  { text: "gpt-4-1106-preview", value: "gpt_4_1106_preview" },
+  { text: "gpt-4-vision-preview", value: "gpt_4_vision_preview" },
+  { text: "gpt-4-1106-vision-preview", value: "gpt_4_1106_vision_preview" },
+  { text: "gpt-4", value: "gpt_4" },
+  { text: "gpt-4-0613", value: "gpt_4_0613" },
+];
+
 export const INPUT_OPTIONS = [
   { text: "Text", value: "text" },
   { text: "File", value: "file" },
@@ -34,4 +43,5 @@ export const NODE_TYPES = {
   gitLoader: "gitLoader",
   textToFile: "textToFile",
   semanticSearch: "semanticSearch",
+  openAI: "openAI",
 };

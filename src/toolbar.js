@@ -21,6 +21,7 @@ export const PipelineToolbar = () => {
         <DraggableNode type="gitLoader" label="Git" />
         <DraggableNode type="textToFile" label="Text to File" />
         <DraggableNode type="semanticSearch" label="Semantic Search" />
+        <DraggableNode type="openAI" label="OpenAI" />
       </div>
     </div>
   );
