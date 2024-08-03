@@ -4,6 +4,7 @@ import { useState } from "react";
 import NodeContainer from "../components/Canvas/NodeContainer";
 import { NODE_TYPES } from "../utils/constants";
 import InputBox from "../components/Canvas/InputBox";
+import CardInfo from "../components/Canvas/CardInfo";
 
 export const UrlLoaderNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || "");
@@ -27,7 +28,7 @@ export const UrlLoaderNode = ({ id, data }) => {
         value={currText}
         onChange={handleTextChange}
       />
-      <span>Reads data from a URL.</span>
+      <CardInfo text={"Reads data from a URL."} />
     </NodeContainer>
   );
 };

@@ -1,3 +1,15 @@
+import {
+  Bot,
+  CloudCog,
+  FileCheck2,
+  FileType,
+  FolderInput,
+  FolderOutput,
+  Github,
+  Link2,
+  ScanSearch,
+} from "lucide-react";
+
 export const FILE_INPUT_OPTIONS = [
   { text: "PDF", value: "pdf" },
   { text: "TXT", value: "txt" },
@@ -44,4 +56,16 @@ export const NODE_TYPES = {
   textToFile: "textToFile",
   semanticSearch: "semanticSearch",
   openAI: "openAI",
+};
+
+export const ICONS = {
+  input: <FolderInput size={18} />,
+  output: <FolderOutput size={18} />,
+  text: <FileType size={18} />,
+  llm: <Bot size={18} />,
+  urlLoader: <Link2 size={18} />,
+  gitLoader: <Github size={18} />,
+  textToFile: <FileCheck2 size={18} />,
+  semanticSearch: <ScanSearch size={18} />,
+  openAI: <CloudCog size={18} />,
 };

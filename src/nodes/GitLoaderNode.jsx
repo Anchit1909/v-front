@@ -4,6 +4,7 @@ import { useState } from "react";
 import NodeContainer from "../components/Canvas/NodeContainer";
 import { NODE_TYPES } from "../utils/constants";
 import InputBox from "../components/Canvas/InputBox";
+import CardInfo from "../components/Canvas/CardInfo";
 
 export const GitLoaderNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || "");
@@ -27,7 +28,7 @@ export const GitLoaderNode = ({ id, data }) => {
         value={currText}
         onChange={handleTextChange}
       />
-      <span>Pulls code from a Git repository.</span>
+      <CardInfo text={"Pulls code from a Git repository."} />
     </NodeContainer>
   );
 };

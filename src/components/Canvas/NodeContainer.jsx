@@ -1,8 +1,7 @@
 // components/Node.js
 import React from "react";
 import { Handle, Position } from "reactflow";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card";
-import { ArrowUpDownIcon } from "lucide-react";
+import { Card, CardContent } from "../ui/Card";
 import NodeHeading from "./NodeHeading";
 
 const NodeContainer = ({
@@ -16,7 +15,7 @@ const NodeContainer = ({
   children,
 }) => {
   return (
-    <Card className="w-full">
+    <Card className="min-w-[300px] border-2 border-orange-400 shadow hover:shadow-lg">
       {inputHandles.map((input, index) => (
         <Handle
           key={`input-${index}`}
@@ -33,7 +32,9 @@ const NodeContainer = ({
         infoAvailable={infoAvailable}
       />
 
-      <CardContent className="">{children}</CardContent>
+      <CardContent className="px-4 flex space-y-2 flex-col">
+        {children}
+      </CardContent>
 
       {outputHandles.map((output, index) => (
         <Handle

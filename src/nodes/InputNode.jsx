@@ -32,7 +32,7 @@ export const InputNode = ({ id, data }) => {
         label="Name"
         type={inputType}
         value={currName}
-        onChange={handleNameChange}
+        onChang e={handleNameChange}
       />
       <SelectBox
         label="Input Type"
