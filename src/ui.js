@@ -13,6 +13,7 @@ import { TextNode } from "./nodes/TextNode";
 import { UrlLoaderNode } from "./nodes/UrlLoaderNode";
 import { GitLoaderNode } from "./nodes/GitLoaderNode";
 import { TextToFileNode } from "./nodes/TextToFileNode";
+import { SemanticSearchNode } from "./nodes/SemanticSearchNode";
 
 import "reactflow/dist/style.css";
 
@@ -26,6 +27,7 @@ const nodeTypes = {
   urlLoader: UrlLoaderNode,
   gitLoader: GitLoaderNode,
   textToFile: TextToFileNode,
+  semanticSearch: SemanticSearchNode,
 };
 
 const selector = (state) => ({

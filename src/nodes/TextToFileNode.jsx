@@ -6,7 +6,7 @@ import { FILE_INPUT_OPTIONS, NODE_TYPES } from "../utils/constants";
 import SelectBox from "../components/Canvas/SelectBox";
 
 export const TextToFileNode = ({ id, data }) => {
-  const [inputType, setInputType] = useState(data.inputType || "PDF");
+  const [inputType, setInputType] = useState(data.inputType || "pdf");
 
   const handleTypeChange = (value) => {
     setInputType(value);

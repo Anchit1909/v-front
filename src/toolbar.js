@@ -20,6 +20,7 @@ export const PipelineToolbar = () => {
         <DraggableNode type="urlLoader" label="URL" />
         <DraggableNode type="gitLoader" label="Git" />
         <DraggableNode type="textToFile" label="Text to File" />
+        <DraggableNode type="semanticSearch" label="Semantic Search" />
       </div>
     </div>
   );

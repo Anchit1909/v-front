@@ -27,8 +27,8 @@ function SelectBox({
         <SelectContent>
           {options.map((type, index) => (
             <>
-              <SelectItem key={index} value={type.text}>
-                {type.value}
+              <SelectItem key={index} value={type.value}>
+                {type.text}
               </SelectItem>
             </>
           ))}
