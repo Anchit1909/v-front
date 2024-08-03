@@ -5,7 +5,7 @@ import NodeContainer from "../components/Canvas/NodeContainer";
 import { NODE_TYPES } from "../utils/constants";
 import InputBox from "../components/Canvas/InputBox";
 
-export const UrlLoaderNode = ({ id, data }) => {
+export const GitLoaderNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || "");
 
   const handleTextChange = (e) => {
@@ -14,20 +14,20 @@ export const UrlLoaderNode = ({ id, data }) => {
 
   return (
     <NodeContainer
-      heading="URL Loader"
-      type={NODE_TYPES.urlLoader}
+      heading="Git Loader"
+      type={NODE_TYPES.gitLoader}
       id={id}
       inputHandles={["value"]}
       outputHandles={["output"]}
       infoAvailable
     >
       <InputBox
-        label="URL"
+        label="Repository"
         type={"url"}
         value={currText}
         onChange={handleTextChange}
       />
-      <span>Reads data from a URL.</span>
+      <span>Pulls code from a Git repository.</span>
     </NodeContainer>
   );
 };

@@ -9,4 +9,5 @@ export const NODE_TYPES = {
   text: "text",
   llm: "llm",
   urlLoader: "urlLoader",
+  gitLoader: "gitLoader",
 };

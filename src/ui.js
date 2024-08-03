@@ -11,6 +11,7 @@ import { LLMNode } from "./nodes/LLMNode";
 import { OutputNode } from "./nodes/OutputNode";
 import { TextNode } from "./nodes/TextNode";
 import { UrlLoaderNode } from "./nodes/UrlLoaderNode";
+import { GitLoaderNode } from "./nodes/GitLoaderNode";
 
 import "reactflow/dist/style.css";
 
@@ -22,6 +23,7 @@ const nodeTypes = {
   customOutput: OutputNode,
   text: TextNode,
   urlLoader: UrlLoaderNode,
+  gitLoader: GitLoaderNode,
 };
 
 const selector = (state) => ({
