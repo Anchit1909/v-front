@@ -47,8 +47,8 @@ export const INPUT_OPTIONS = [
 ];
 
 export const NODE_TYPES = {
-  input: "input",
-  output: "output",
+  customInput: "customInput",
+  customOutput: "customOutput",
   text: "text",
   llm: "llm",
   urlLoader: "urlLoader",
@@ -59,8 +59,8 @@ export const NODE_TYPES = {
 };
 
 export const ICONS = {
-  input: <FolderInput size={18} />,
-  output: <FolderOutput size={18} />,
+  customInput: <FolderInput size={18} />,
+  customOutput: <FolderOutput size={18} />,
   text: <FileType size={18} />,
   llm: <Bot size={18} />,
   urlLoader: <Link2 size={18} />,

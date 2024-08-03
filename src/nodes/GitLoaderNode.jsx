@@ -18,7 +18,7 @@ export const GitLoaderNode = ({ id, data }) => {
       heading="Git Loader"
       type={NODE_TYPES.gitLoader}
       id={id}
-      inputHandles={["value"]}
+      inputHandles={["repo"]}
       outputHandles={["output"]}
       infoAvailable
     >

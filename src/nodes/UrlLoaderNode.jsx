@@ -18,7 +18,7 @@ export const UrlLoaderNode = ({ id, data }) => {
       heading="URL Loader"
       type={NODE_TYPES.urlLoader}
       id={id}
-      inputHandles={["value"]}
+      inputHandles={["url"]}
       outputHandles={["output"]}
       infoAvailable
     >

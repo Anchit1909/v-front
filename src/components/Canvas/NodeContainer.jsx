@@ -15,7 +15,7 @@ const NodeContainer = ({
   children,
 }) => {
   return (
-    <Card className="min-w-[300px] border-2 border-orange-400 shadow hover:shadow-lg relative">
+    <Card className="min-w-[300px] relative transition-shadow duration-200 ease-in-out hover:shadow-[0_0_15px_rgba(255,156,14,1)]">
       {inputHandles.map((input, index) => (
         <div
           key={`input-${index}`}

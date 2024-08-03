@@ -30,7 +30,7 @@ function NodeHeading({
   };
 
   return (
-    <CardHeader className="px-4 py-4">
+    <CardHeader className="px-4">
       <CardTitle className="flex flex-row items-center justify-between">
         {/* left part */}
         <div className="flex flex-row items-center space-x-1">

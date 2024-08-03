@@ -17,6 +17,7 @@ export const TextNode = ({ id, data }) => {
       heading="Text"
       type={NODE_TYPES.text}
       id={id}
+      inputHandles={["input"]}
       outputHandles={["output"]}
       infoAvailable
     >

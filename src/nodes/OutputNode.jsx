@@ -24,9 +24,9 @@ export const OutputNode = ({ id, data }) => {
   return (
     <NodeContainer
       heading="Output"
-      type={NODE_TYPES.output}
+      type={NODE_TYPES.customOutput}
       id={id}
-      inputHandles={["value"]}
+      inputHandles={["output"]}
       infoAvailable
     >
       <InputBox

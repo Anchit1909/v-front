@@ -23,16 +23,16 @@ export const InputNode = ({ id, data }) => {
   return (
     <NodeContainer
       heading="Input"
-      type={NODE_TYPES.input}
+      type={NODE_TYPES.customInput}
       id={id}
-      outputHandles={["value"]}
+      outputHandles={["input"]}
       infoAvailable
     >
       <InputBox
         label="Name"
         type={inputType}
         value={currName}
-        onChang e={handleNameChange}
+        onChange={handleNameChange}
       />
       <SelectBox
         label="Input Type"
