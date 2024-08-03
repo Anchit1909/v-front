@@ -15,15 +15,25 @@ const NodeContainer = ({
   children,
 }) => {
   return (
-    <Card className="min-w-[300px] border-2 border-orange-400 shadow hover:shadow-lg">
+    <Card className="min-w-[300px] border-2 border-orange-400 shadow hover:shadow-lg relative">
       {inputHandles.map((input, index) => (
-        <Handle
+        <div
           key={`input-${index}`}
-          type="target"
-          position={Position.Left}
-          id={`${id}-${input}`}
-          style={{ top: `${((index + 1) / (inputHandles.length + 1)) * 100}%` }}
-        />
+          className="absolute left-[-5px]"
+          style={{
+            top: `${((index + 1) / (inputHandles.length + 1)) * 100}%`,
+            transform: "translateY(-50%)",
+          }}
+        >
+          <Handle
+            type="target"
+            position={Position.Left}
+            id={`${id}-${input}`}
+          />
+          <span className="z-10 absolute right-2 transform -translate-y-1/2 text-sm text-primary font-medium">
+            {input}
+          </span>
+        </div>
       ))}
       <NodeHeading
         heading={heading}
@@ -31,21 +41,27 @@ const NodeContainer = ({
         id={id}
         infoAvailable={infoAvailable}
       />
-
       <CardContent className="px-4 flex space-y-2 flex-col">
         {children}
       </CardContent>
-
       {outputHandles.map((output, index) => (
-        <Handle
+        <div
           key={`output-${index}`}
-          type="source"
-          position={Position.Right}
-          id={`${id}-${output}`}
+          className="absolute right-[-5px]"
           style={{
             top: `${((index + 1) / (outputHandles.length + 1)) * 100}%`,
+            transform: "translateY(-50%)",
           }}
-        />
+        >
+          <Handle
+            type="source"
+            position={Position.Right}
+            id={`${id}-${output}`}
+          />
+          <span className="z-10 absolute left-2 transform -translate-y-1/2 text-sm text-primary font-medium">
+            {output}
+          </span>
+        </div>
       ))}
     </Card>
   );
