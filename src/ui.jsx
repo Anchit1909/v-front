@@ -1,8 +1,5 @@
 // ui.js
-// Displays the drag-and-drop UI
-// --------------------------------------------------
-
-import { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import ReactFlow, { Controls, Background, MiniMap } from "reactflow";
 import { useStore } from "./store";
 import { shallow } from "zustand/shallow";
@@ -14,9 +11,10 @@ import { UrlLoaderNode } from "./nodes/UrlLoaderNode";
 import { GitLoaderNode } from "./nodes/GitLoaderNode";
 import { TextToFileNode } from "./nodes/TextToFileNode";
 import { SemanticSearchNode } from "./nodes/SemanticSearchNode";
+import { OpenAINode } from "./nodes/OpenAINode";
+import CustomEdge from "./components/canvas/CustomEdge";
 
 import "reactflow/dist/style.css";
-import { OpenAINode } from "./nodes/OpenAINode";
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };
@@ -30,6 +28,10 @@ const nodeTypes = {
   textToFile: TextToFileNode,
   semanticSearch: SemanticSearchNode,
   openAI: OpenAINode,
+};
+
+const edgeTypes = {
+  custom: CustomEdge,
 };
 
 const selector = (state) => ({
@@ -104,7 +106,7 @@ export const PipelineUI = () => {
     <>
       <div
         ref={reactFlowWrapper}
-        style={{ width: "100vw", height: "82vh" }}
+        style={{ width: "100vw", height: "75vh" }}
         className=""
       >
         <ReactFlow
@@ -117,11 +119,12 @@ export const PipelineUI = () => {
           onDragOver={onDragOver}
           onInit={setReactFlowInstance}
           nodeTypes={nodeTypes}
+          edgeTypes={edgeTypes}
           proOptions={proOptions}
           snapGrid={[gridSize, gridSize]}
           connectionLineType="smoothstep"
         >
-          <Background color="#aaa" gap={gridSize} />
+          <Background color="#475569" gap={gridSize} />
           <Controls />
           <MiniMap />
         </ReactFlow>

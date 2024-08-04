@@ -1,5 +1,4 @@
 // store.js
-
 import { create } from "zustand";
 import {
   addEdge,
@@ -28,21 +27,20 @@ export const useStore = create((set, get) => ({
   removeNode: (nodeId) => {
     const filteredNodes = get().nodes.filter((node) => node.id !== nodeId);
 
-    // remove all the edges asscoaited with this node
-    const filterdEdges = get().edges.filter(
+    const filteredEdges = get().edges.filter(
       (edge) => edge.source !== nodeId && edge.target !== nodeId
     );
 
     set({
       nodes: filteredNodes,
-      edges: filterdEdges,
+      edges: filteredEdges,
     });
   },
   removeEdge: (edgeId) => {
-    const filterdEdges = get().edges.filter((edge) => edge.id !== edgeId);
+    const filteredEdges = get().edges.filter((edge) => edge.id !== edgeId);
 
     set({
-      edges: filterdEdges,
+      edges: filteredEdges,
     });
   },
   onNodesChange: (changes) => {
@@ -60,7 +58,7 @@ export const useStore = create((set, get) => ({
       edges: addEdge(
         {
           ...connection,
-          type: "smoothstep",
+          type: "custom",
           animated: true,
           markerEnd: { type: MarkerType.Arrow, height: "20px", width: "20px" },
         },
