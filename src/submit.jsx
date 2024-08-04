@@ -4,52 +4,51 @@ import { useToast } from "./components/ui/useToast";
 import { ToastAction } from "./components/ui/Toast";
 import { Button } from "./components/ui/Button";
 import { ArrowRight } from "lucide-react";
+import { useFetchPipelineData } from "./hooks/useFetchPipelineData";
 
 export const SubmitButton = () => {
   const { nodes, edges } = useStore();
   const { toast } = useToast();
+  const { fetchPipeline, isLoading } = useFetchPipelineData();
+
+  const showSuccessToast = (data) => {
+    const validityMessage = data.is_dag
+      ? "Pipeline is valid."
+      : "Pipeline is not valid.";
+
+    toast({
+      title: "Pipeline Analysis",
+      description: (
+        <div className="flex flex-col space-y-1">
+          <p>Number of Nodes: {data.num_nodes}</p>
+          <p>Number of Edges: {data.num_edges}</p>
+          <p>Is DAG: {data.is_dag.toString()}</p>
+          <p className="font-medium text-base">{validityMessage}</p>
+        </div>
+      ),
+      duration: 5000,
+    });
+  };
+
+  const showErrorToast = (retryFunction) => {
+    toast({
+      title: "Uh oh! Something went wrong.",
+      description: "There was an error submitting the pipeline.",
+      action: (
+        <ToastAction altText="Try again" onClick={retryFunction}>
+          Try again
+        </ToastAction>
+      ),
+      duration: 5000,
+    });
+  };
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:8000/pipelines/parse", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ nodes, edges }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const data = await response.json();
-      const validityMessage = data.is_dag
-        ? "Pipeline is valid."
-        : "Pipeline is not valid.";
-
-      toast({
-        title: "Pipeline Analysis",
-        description: (
-          <div className="flex flex-col space-y-1">
-            <p>Number of Nodes: {data.num_nodes}</p>
-            <p>Number of Edges: {data.num_edges}</p>
-            <p>Is DAG: {data.is_dag.toString()}</p>
-            <p className="font-medium text-base">{validityMessage}</p>
-          </div>
-        ),
-        duration: 5000,
-      });
+      const data = await fetchPipeline(nodes, edges);
+      showSuccessToast(data);
     } catch (error) {
-      toast({
-        title: "Uh oh! Something went wrong.",
-        description: "There was an error submitting the pipeline.",
-        action: (
-          <ToastAction altText="Try again" onClick={handleSubmit}>
-            Try again
-          </ToastAction>
-        ),
-      });
+      showErrorToast(handleSubmit);
       console.error("There was an error submitting the pipeline:", error);
     }
   };
@@ -60,9 +59,11 @@ export const SubmitButton = () => {
         type="submit"
         variant="outline"
         onClick={handleSubmit}
+        disabled={isLoading}
         className="space-x-1"
       >
-        <span>Submit Pipeline</span> <ArrowRight className="mr-2 h-4 w-4" />
+        <span>{isLoading ? "Submitting..." : "Submit Pipeline"}</span>
+        {!isLoading && <ArrowRight className="ml-2 h-4 w-4" />}
       </Button>
     </div>
   );
