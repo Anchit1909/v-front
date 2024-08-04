@@ -18,7 +18,7 @@ function SelectBox({
 }) {
   return (
     <div className="w-full">
-      {label && <Label>{label}</Label>}
+      {label && <Label className="text-xs">{label}</Label>}
       <Select defaultValue={value} onValueChange={onChange}>
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select" />

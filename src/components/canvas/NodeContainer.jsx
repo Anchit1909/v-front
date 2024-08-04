@@ -41,7 +41,7 @@ const NodeContainer = ({
         id={id}
         infoAvailable={infoAvailable}
       />
-      <CardContent className="px-4 flex space-y-2 flex-col">
+      <CardContent className="px-4 flex space-y-1 flex-col">
         {children}
       </CardContent>
       {outputHandles.map((output, index) => (

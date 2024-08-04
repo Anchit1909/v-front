@@ -8,7 +8,7 @@ function InputBox({ label, type = "text", className = "", ...props }) {
 
   return (
     <div className="w-full">
-      {label && <Label>{label}</Label>}
+      {label && <Label className="text-xs">{label}</Label>}
       {isFile ? <Input type={type}></Input> : <Input {...props}></Input>}
     </div>
   );
