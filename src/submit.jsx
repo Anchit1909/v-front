@@ -3,6 +3,7 @@ import { useStore } from "./store";
 import { useToast } from "./components/ui/useToast";
 import { ToastAction } from "./components/ui/Toast";
 import { Button } from "./components/ui/Button";
+import { ArrowRight } from "lucide-react";
 
 export const SubmitButton = () => {
   const { nodes, edges } = useStore();
@@ -55,8 +56,13 @@ export const SubmitButton = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <Button type="submit" variant="outline" onClick={handleSubmit}>
-        Submit
+      <Button
+        type="submit"
+        variant="outline"
+        onClick={handleSubmit}
+        className="space-x-1"
+      >
+        <span>Submit Pipeline</span> <ArrowRight className="mr-2 h-4 w-4" />
       </Button>
     </div>
   );
