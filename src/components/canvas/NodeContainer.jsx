@@ -3,6 +3,7 @@ import React from "react";
 import { Handle, Position } from "reactflow";
 import { Card, CardContent } from "../ui/Card";
 import NodeHeading from "./NodeHeading";
+import { cn } from "../../utils/styles";
 
 const NodeContainer = ({
   className = "",
@@ -15,7 +16,12 @@ const NodeContainer = ({
   children,
 }) => {
   return (
-    <Card className="min-w-[300px] relative transition-shadow duration-200 ease-in-out hover:shadow-[0_0_15px_rgba(255,156,14,1)]">
+    <Card
+      className={cn(
+        "min-w-[300px] relative transition-shadow duration-200 ease-in-out hover:shadow-[0_0_15px_rgba(255,156,14,1)]",
+        className
+      )}
+    >
       {inputHandles.map((input, index) => (
         <div
           key={`input-${index}`}

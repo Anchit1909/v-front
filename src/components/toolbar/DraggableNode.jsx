@@ -17,11 +17,10 @@ export const DraggableNode = ({ type, label }) => {
       onDragStart={(event) => onDragStart(event, type)}
       onDragEnd={(event) => (event.target.style.cursor = "grab")}
       className={`
-        flex flex-col space-y-1 cursor-grab 
-        min-w-[80px] text-center py-2 px-2 
-        justify-center place-items-center rounded-lg 
-        border-2 border-primary 
-        transition-shadow duration-200 ease-in-out
+        flex flex-col justify-center place-items-center
+        min-w-[80px] cursor-grab text-center py-2 px-2
+        space-y-1 border-2 border-primary rounded-lg 
+        transition-shadow duration-200 ease-in-out 
         hover:shadow-[0_0_15px_rgba(255,156,14,1)]
         ${type}
       `}

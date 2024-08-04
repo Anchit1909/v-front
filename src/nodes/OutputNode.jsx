@@ -7,7 +7,6 @@ import SelectBox from "../components/canvas/SelectBox";
 import { INPUT_OPTIONS, NODE_TYPES } from "../utils/constants";
 
 export const OutputNode = ({ id, data }) => {
-  console.log(data);
   const [currName, setCurrName] = useState(
     data?.outputName || id.replace("customOutput-", "output_")
   );

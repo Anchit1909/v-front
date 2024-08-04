@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/Select";
+import { cn } from "../../utils/styles";
 
 function SelectBox({
   label,
@@ -17,7 +18,7 @@ function SelectBox({
   ...props
 }) {
   return (
-    <div className="w-full">
+    <div className={cn("w-full", className)}>
       {label && <Label className="text-xs">{label}</Label>}
       <Select defaultValue={value} onValueChange={onChange}>
         <SelectTrigger className="w-full">

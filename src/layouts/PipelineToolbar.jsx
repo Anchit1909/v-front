@@ -28,18 +28,18 @@ export const PipelineToolbar = () => {
   }, [searchValue]);
 
   return (
-    <div className="max-w-screen-xl mx-auto w-full flex justify-between gap-10 px-5 py-5 shadow overflow-auto rounded-lg">
+    <div className="mx-auto max-w-screen-xl w-full flex justify-between gap-10 px-5 py-5 shadow overflow-auto rounded-lg">
       <div className="flex flex-col space-y-2">
         <div className="flex items-center">
           <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
           <input
-            className="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none border-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+            className="w-full h-10 flex rounded-md bg-transparent py-3 text-sm outline-none border-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
             placeholder="Search Nodes..."
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
         </div>
-        <div className="mt-5 flex flex-wrap gap-2.5">
+        <div className="flex flex-wrap gap-2.5 mt-5">
           {filteredNodes.map((node) => (
             <DraggableNode
               key={node.type}
