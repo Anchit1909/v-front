@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useStore } from "../../store";
+import { useStore } from "../../store/store";
 import { shallow } from "zustand/shallow";
 import { CircleX, Info } from "lucide-react";
 import { CardHeader, CardTitle } from "../ui/Card";

@@ -1,5 +1,5 @@
 // draggableNode.js
-import { ICONS } from "./utils/constants";
+import { ICONS } from "../../utils/constants";
 
 export const DraggableNode = ({ type, label }) => {
   const onDragStart = (event, nodeType) => {

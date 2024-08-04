@@ -1,18 +1,18 @@
 // ui.js
 import React, { useState, useRef, useCallback } from "react";
 import ReactFlow, { Controls, Background, MiniMap } from "reactflow";
-import { useStore } from "./store";
+import { useStore } from "../store/store";
 import { shallow } from "zustand/shallow";
-import { InputNode } from "./nodes/InputNode";
-import { LLMNode } from "./nodes/LLMNode";
-import { OutputNode } from "./nodes/OutputNode";
-import { TextNode } from "./nodes/TextNode";
-import { UrlLoaderNode } from "./nodes/UrlLoaderNode";
-import { GitLoaderNode } from "./nodes/GitLoaderNode";
-import { TextToFileNode } from "./nodes/TextToFileNode";
-import { SemanticSearchNode } from "./nodes/SemanticSearchNode";
-import { OpenAINode } from "./nodes/OpenAINode";
-import CustomEdge from "./components/canvas/CustomEdge";
+import { InputNode } from "../nodes/InputNode";
+import { LLMNode } from "../nodes/LLMNode";
+import { OutputNode } from "../nodes/OutputNode";
+import { TextNode } from "../nodes/TextNode";
+import { UrlLoaderNode } from "../nodes/UrlLoaderNode";
+import { GitLoaderNode } from "../nodes/GitLoaderNode";
+import { TextToFileNode } from "../nodes/TextToFileNode";
+import { SemanticSearchNode } from "../nodes/SemanticSearchNode";
+import { OpenAINode } from "../nodes/OpenAINode";
+import CustomEdge from "../components/canvas/CustomEdge";
 
 import "reactflow/dist/style.css";
 

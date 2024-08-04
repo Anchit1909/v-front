@@ -1,8 +1,8 @@
 // toolbar.js
 
 import { Search } from "lucide-react";
-import { DraggableNode } from "./DraggableNode";
-import { SubmitButton } from "./submit";
+import { DraggableNode } from "../components/toolbar/DraggableNode";
+import { SubmitButton } from "../components/toolbar/Submit";
 import { useState, useMemo } from "react";
 
 const nodeTypes = [

@@ -1,10 +1,10 @@
 // submit.js
-import { useStore } from "./store";
-import { useToast } from "./components/ui/useToast";
-import { ToastAction } from "./components/ui/Toast";
-import { Button } from "./components/ui/Button";
+import { useStore } from "../../store/store";
+import { useToast } from "../ui/useToast";
+import { ToastAction } from "../ui/Toast";
+import { Button } from "../ui/Button";
 import { ArrowRight } from "lucide-react";
-import { useFetchPipelineData } from "./hooks/useFetchPipelineData";
+import { useFetchPipelineData } from "../../hooks/useFetchPipelineData";
 
 export const SubmitButton = () => {
   const { nodes, edges } = useStore();

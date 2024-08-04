@@ -4,7 +4,7 @@ import {
   Position,
   getSmoothStepPath,
 } from "reactflow";
-import { useStore } from "../../store";
+import { useStore } from "../../store/store";
 import { shallow } from "zustand/shallow";
 import { CircleX } from "lucide-react";
 
